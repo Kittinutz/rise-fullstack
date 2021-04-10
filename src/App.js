@@ -9,13 +9,13 @@ import Shop from "./view/Shop";
 function App() {
   return (
     <div className="App">
-      <Router>
+      <Router basename="rise-fullstack">
         <HeadNav />
         <Switch>
-          <Route exact path="/rise-fullstack/">
+          <Route exact path="/">
             <Shop />
           </Route>
-          <Route path="/rise-fullstack/responsive">
+          <Route path="/responsive">
             <ResponsivePage />
           </Route>
         </Switch>

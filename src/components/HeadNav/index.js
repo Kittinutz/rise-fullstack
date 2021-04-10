@@ -12,7 +12,7 @@ const HeadNav = () => {
       </div>
       <div className="desktop-nav-wrapper">
         <Link className="btn" to="/">
-          first test
+          First test
         </Link>
         <Link className="btn" to="/responsive">
           Second test
