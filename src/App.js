@@ -12,10 +12,10 @@ function App() {
       <Router>
         <HeadNav />
         <Switch>
-          <Route exact path="/">
+          <Route exact path="/rise-fullstack/">
             <Shop />
           </Route>
-          <Route path="/responsive">
+          <Route path="/rise-fullstack/responsive">
             <ResponsivePage />
           </Route>
         </Switch>

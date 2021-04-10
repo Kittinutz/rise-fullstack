@@ -1,5 +1,7 @@
 .responsive-page-wrapper {
   padding-top: 60px;
+  color: #fff;
+
   .layout {
     margin: 0 auto;
     padding: 0 150px;
@@ -40,8 +42,4 @@
       flex-direction: column;
     }
   }
-}
-
-* {
-  color: black;
 }
