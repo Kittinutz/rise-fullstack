@@ -1,0 +1,13 @@
+.item-container {
+  display: flex;
+  flex-direction: column;
+
+  .btn {
+    min-width: 40px;
+    margin: 4px;
+  }
+}
+
+.food-item-wrapper {
+  margin: 8px 16px;
+}
