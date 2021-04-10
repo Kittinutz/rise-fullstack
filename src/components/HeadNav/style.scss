@@ -1,0 +1,76 @@
+.head-nav-wrapper {
+  display: flex;
+  background-color: salmon;
+  position: fixed;
+  align-items: center;
+  width: 100%;
+  height: 60px;
+  padding: 12px;
+
+  .logo {
+    height: 40px;
+  }
+  .btn {
+    width: 50px;
+    min-height: 40px;
+    min-width: 120px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    margin: 0 8px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 16px;
+    color: #fff;
+    &:hover {
+      color: yellowgreen;
+    }
+  }
+
+  .desktop-nav-wrapper {
+    display: flex;
+    width: 100%;
+  }
+
+  .mobile-nav-wrapper {
+    display: none;
+  }
+
+  .hambur1,
+  .hambur2,
+  .hambur3 {
+    width: 35px;
+    height: 5px;
+    background-color: black;
+    margin: 6px 0;
+  }
+
+  @media screen and (max-width: 768px) {
+    justify-content: space-between;
+
+    .desktop-nav-wrapper {
+      display: none;
+    }
+
+    .mobile-nav-wrapper {
+      display: flex;
+      align-self: flex-end;
+      position: relative;
+    }
+
+    .menu-wrapper {
+      display: none;
+
+      &.active {
+        display: flex;
+      }
+
+      flex-direction: column;
+      top: 40px;
+      background-color: salmon;
+      position: absolute;
+      right: 0;
+    }
+  }
+}

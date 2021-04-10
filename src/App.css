@@ -40,3 +40,7 @@
 * {
   box-sizing: border-box;
 }
+
+.wrapper-shop {
+  padding-top: 60px;
+}

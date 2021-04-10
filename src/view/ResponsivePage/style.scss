@@ -1,0 +1,47 @@
+.responsive-page-wrapper {
+  padding-top: 60px;
+  .layout {
+    margin: 0 auto;
+    padding: 0 150px;
+
+    .paragraph {
+      text-align: left;
+    }
+  }
+
+  .bg-image {
+    height: 500px;
+    width: 100%;
+    background-image: url("https://cf.bstatic.com/images/hotel/max1024x768/116/116281457.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: scroll;
+  }
+  .section-image {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+  .cat-image {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    margin: 16px 16px;
+  }
+
+  @media screen and (max-width: 768px) {
+    .layout {
+      padding: 40px;
+    }
+
+    .section-image {
+      flex-direction: column;
+    }
+  }
+}
+
+* {
+  color: black;
+}
