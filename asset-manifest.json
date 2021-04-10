@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/rise-fullstack/static/css/main.d2faf47a.chunk.css",
-    "main.js": "/rise-fullstack/static/js/main.c0023034.chunk.js",
-    "main.js.map": "/rise-fullstack/static/js/main.c0023034.chunk.js.map",
+    "main.js": "/rise-fullstack/static/js/main.4623b918.chunk.js",
+    "main.js.map": "/rise-fullstack/static/js/main.4623b918.chunk.js.map",
     "runtime-main.js": "/rise-fullstack/static/js/runtime-main.894aa892.js",
     "runtime-main.js.map": "/rise-fullstack/static/js/runtime-main.894aa892.js.map",
     "static/js/2.513a5bf1.chunk.js": "/rise-fullstack/static/js/2.513a5bf1.chunk.js",
@@ -18,6 +18,6 @@
     "static/js/runtime-main.894aa892.js",
     "static/js/2.513a5bf1.chunk.js",
     "static/css/main.d2faf47a.chunk.css",
-    "static/js/main.c0023034.chunk.js"
+    "static/js/main.4623b918.chunk.js"
   ]
 }
