@@ -21,7 +21,7 @@ export const onAddToCart = (selectedItems, setSelectItem) => (data) => {
 
 export const onRemoveFormCart = (selectedItems, setSelectItem) => (data) => {
   const { name, price } = data;
-  if (selectedItems[name]) {
+  if (selectedItems[name] && selectedItems[name]["quantity"] > 0) {
     setSelectItem({
       ...selectedItems,
       [name]: {
@@ -34,12 +34,12 @@ export const onRemoveFormCart = (selectedItems, setSelectItem) => (data) => {
       ...selectedItems,
       [name]: {
         price: price,
-        quantity: 1,
+        quantity: 0,
       },
     });
   }
 };
-export const getDiscountSetCondition = (selectedItem, discountDoublesSet) => {
+export const getIsDiscountSetCondition = (selectedItem, discountDoublesSet) => {
   let isDiscount = false;
   for (let i = 0; i < discountDoublesSet.length; i++) {
     const key = discountDoublesSet[i];

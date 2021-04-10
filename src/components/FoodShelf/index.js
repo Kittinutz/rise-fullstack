@@ -24,22 +24,25 @@ const FoodShelf = ({
     <div className="show-item-wrapper">
       <div className="item-container">
         {foodItems.map(({ name, price }) => {
-          const quantity = selectedItems[name] && selectedItems[name].quantity;
+          const quantity =
+            selectedItems &&
+            selectedItems[name] &&
+            selectedItems[name].quantity;
           return (
             <div key={name} className="food-item-wrapper">
               <div>{name}</div>
               <div>{price} ฿</div>
               <div className="item-action">
-                {quantity && quantity > 0 && (
+                {quantity > 0 && (
                   <button
-                    className="btn"
+                    className="btn remove"
                     onClick={handleRemoveFromCart({ name, price })}
                   >
                     -
                   </button>
                 )}
                 <button
-                  className="btn"
+                  className="btn add"
                   onClick={handleAddToCart({ name, price })}
                 >
                   +

@@ -1,7 +1,7 @@
 import React from "react";
 import {
   getDisCountGrandTotal,
-  getDiscountSetCondition,
+  getIsDiscountSetCondition,
 } from "../../selectors/storeShop";
 import { discountDoublesSet } from "../../enums/foodItems";
 import "./style.scss";
@@ -18,7 +18,7 @@ const Bill = ({ selectedItems = {}, isMember = false }) => {
     return (acc += total);
   }, 0);
 
-  const isHaveDiscountItem = getDiscountSetCondition(
+  const isHaveDiscountItem = getIsDiscountSetCondition(
     selectedItems,
     discountDoublesSet
   );
@@ -46,7 +46,10 @@ const Bill = ({ selectedItems = {}, isMember = false }) => {
             const price = selectedItems[name].price;
             const totalPrice = quantity * price;
             return (
-              <tr key={`${name}-${quantity}-${price}`}>
+              <tr
+                key={`${name}-${quantity}-${price}`}
+                className="item-selected"
+              >
                 <td>{name}</td>
                 <td>{quantity}</td>
                 <td>{formatPrice(totalPrice)}</td>
@@ -70,7 +73,7 @@ const Bill = ({ selectedItems = {}, isMember = false }) => {
       {isHaveDiscountItem && (
         <div className="show-discount-double-wrapper">
           <span>Total discount form doubles set</span>
-          <span>{formatPrice(totalDiscountDoubleSet)}</span>
+          <span>{formatPrice(totalDiscountDoubleSet)} ฿</span>
         </div>
       )}
 
@@ -83,7 +86,9 @@ const Bill = ({ selectedItems = {}, isMember = false }) => {
       {isHaveItemList && (
         <div className="wrapper-grand-total">
           <span>Grand total</span>
-          <span>{formatPrice(grandTotal)} ฿</span>
+          <span className="grand-total-wrapper">
+            {formatPrice(grandTotal)} ฿
+          </span>
         </div>
       )}
     </div>
